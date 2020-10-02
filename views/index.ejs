@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>funky web</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <h3 class="ml-2 mt-1">Thumbvids</h3>
+        <div class="ml-auto big">
+            <ul>
+                <li><a href="/templates">Templates</a></li>
+                <li><a href="/scratch">Edit Picture</a></li>
+                <% if(typeof user !== 'undefined' ) { %>
+                    <li><a href="/google" target="_blank">Link Youtube</a></li>
+                    <li><a href="">Hi there, <%= user.firstName %></a></li>
+                <% } else { %>
+                    <li><a href="/signin">Log In</a></li>
+                    <li><a href="/signup">Sign Up</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="ml-auto ic mr-3">
+            <i class="uil uil-bars header-icon"></i>
+        </div>
+        <div class="small">
+            <div class="ul">
+                <ul>
+                    <li><a href="/templates">Templates</a></li>
+                    <li><a href="/scratch">Edit Picture</a></li>
+                    <% if(typeof user !== 'undefined' ) { %>
+                        <li><a href="/google" target="_blank">Link Youtube</a></li>
+                        <li><a href="">Hi there, <%= user.firstName %></a></li>
+                    <% } else { %>
+                        <li><a href="/signin">Log In</a></li>
+                        <li><a href="/signup">Sign Up</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="header-text">
+            <h2 class="break">
+                Create Designs, <br> Edit Pictures, <br> Annotate Videos all in one place
+            </h2>
+            <h2 class="main">
+                Create Designs, Edit Pictures, Annotate Videos all in one place
+            </h2>
+            <% if(typeof user !== 'undefined' ) { %>
+                <a href="/templates" class="btn mt-3 btn-prim">Get Started</a>
+            <% } else { %>
+                <a href="/signup" class="btn mt-3 btn-prim">Create a free account</a>
+            <% } %>
+            
+        </div>
+    </header>
+
+    <section class="products mt-5 pt-5">
+        <div class="container">
+            <h3 class="text-center">A few things you can do on Thumbvids</h3>         
+            <p class="mt-1 info">
+                While this site is not perfect in any way, I have tried to make it easy for anybody to
+                use. Here are a list of what you can get done here
+            </p>
+            <div class="mt-4 pt-4"></div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="images/bg.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mt-2">Create from scratch</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="images/art.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mt-2">Edit your photos</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-img-top">
+                                <img src="images/bg.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mt-2">Annotate your videos</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="mt-5 pt-5 sec-header">
+        <div class="container">
+            <h3 class="text-center">A couple of reasons to use Thumbvids</h3>         
+            <p class="mt-1 info">
+                A couple of months ago, I was wondering how sites like Canva were created and even
+                though I don't have an exact Canva-clone, it gives me joy knowing I can create it if I want to.
+            </p>
+            <div class="mt-4 pt-4"></div>
+                <div class="row mt-5">
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <i class="uil uil-pen icon first-icon"></i>
+                        <h5 class="mt-4">Hundreds of free Templates</h5>
+                        <p>
+                            Not every one is a design mojo - not me at all. So I have tried to create a few templates for you to
+                            easily get started.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <i class="uil uil-image icon second-icon"></i>
+                        <h5 class="mt-4">Hundreds of free Stock Photos</h5>
+                        <p>
+                            Using the Unsplash API, I have added a few stock photos for you to get started with. You can search for even
+                            more based on what you are working on.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <i class="uil uil-font icon third-icon"></i>
+                        <h5 class="mt-4">Access to gorgeous Fonts</h5>
+                        <p>
+                            All thanks to Google. I have been able to pre-load some fonts in the app for you to use. I am adding
+                            more and will make sure you get a plethora of fonts to use.
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section class="offers mt-3 pt-3">
+        <h2 class="text-center my-3">You need further convincing? I've got you</h2>
+        <div class="container mt-3">
+            <div class="flex-display pt-5 mt-3">
+                <div class="flex-one">
+                    <div class="text">
+                        <h4>Edit Photos in no time</h4>
+                        <p class="mt-1">
+                            Edit your pictures. Greyscale, Polaroid, Brownie, Kodachrome, Emboss, Sharpen etc. Over 15 Image 
+                            Effects options. Create Thumbnails for your youtube Videos. Use your own images or pick from a 
+                            large library of high quality stock photos. This is your one-shop website for Imatge branding.
+                            With more updates coming on, you can be sure to get all you want here.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-two">
+                    <img src="images/14.png" alt="" class="img img-fluid">
+                </div>
+            </div>
+            <div class="flex-display">
+                <div class="flex-two">
+                    <img src="images/designer-2.png" alt="" class="img-fluid">
+                </div>
+                <div class="flex-one side">
+                    <div class="text">
+                        <h4>Create high quality Photos from scratch</h4>
+                        <p class="mt-1">
+                            Edit your pictures. Greyscale, Polaroid, Brownie, Kodachrome, Emboss, Sharpen etc. Over 15 Image 
+                            Effects options. Create Thumbnails for your youtube Videos. Use your own images or pick from a 
+                            large library of high quality stock photos. This is your one-shop website for Imatge branding.
+                            With more updates coming on, you can be sure to get all you want here.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-display">
+                <div class="flex-one">
+                    <div class="text">
+                        <h4>Add Annotations to Videos (coming soon)</h4>
+                        <p class="mt-1">
+                            Edit your pictures. Greyscale, Polaroid, Brownie, Kodachrome, Emboss, Sharpen etc. Over 15 Image 
+                            Effects options. Create Thumbnails for your youtube Videos. Use your own images or pick from a 
+                            large library of high quality stock photos. This is your one-shop website for Imatge branding.
+                            With more updates coming on, you can be sure to get all you want here.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-two">
+                    <img src="images/designer.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 pt-5"></div>
+    </section>
+
+    <!-- <section class="video-display">
+        <div class="container">
+            <video src="video.mp4" autoplay="true"></video>
+        </div>
+    </section> -->
+
+    <section class="mt-3 pt-3 sign-up">
+        <div class="container">
+            <div class="text">
+                <h2>Get more when you sign up</h2>
+                <p class="mt-2">
+                    Keep record of your designs, Get design Youtube promotion tips in your email, Add Templates as favorites
+                </p>
+                <% if(typeof user !== 'undefined' ) { %>
+                    <a href="/templates" class="btn mt-3 btn-white">Get Started</a>
+                <% } else { %>
+                    <a href="/signup" class="btn mt-3 btn-white">Create a free account</a>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <section class="about-me mt-5 pt-5">
+        <div class="container text-center">
+            <div class="text">
+                <h2>You know what they say - No one is perfect!</h2>
+                <p class="mt-2">
+                    I am a new Javascript (MERN) developer. I am still improving the site but if you have ideas of 
+                    how I can better do this, please reach out to me on the links below - as soon as they 
+                    start working &#128578;. Also, I am open to Junior Developer, Entry-level jobs or Freelance 
+                    Projects. If you would like to see other cool projects that I have worked on, Please
+                    check my Portfolio or my GitHub Account below. I have also put my phone number and email address 
+                    on the footer of this website. Thank You &#128578;!
+                </p>
+                <div class="mt-3">
+                    <a href="">
+                        <i class="uil uil-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-medium-m"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-user"></i>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        let currStyle;
+        document.querySelector('.nav .header-icon ').addEventListener('click', () => {
+            if(!currStyle) {
+                currStyle = getComputedStyle(document.querySelector('.small ul')).display;
+                document.querySelector('.small .ul').style.display = 'block';
+            } else {
+                currStyle = null;
+                document.querySelector('.small .ul').style.display = 'none';
+            }
+        })
+    </script>
+</body>
+
+</html>
